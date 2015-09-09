@@ -1,13 +1,6 @@
 on boot
-
-on property:sys.usb.config=charging
-    write /sys/devices/platform/android_usb/usb_function_switch 0
-    setprop sys.usb.state ${sys.usb.config}
-
-on property:sys.usb.config=mtp,adb
     write /sys/devices/platform/android_usb/usb_function_switch 130
     setprop sys.usb.state ${sys.usb.config}
-
     start choice_fn
 
 service choice_fn /sbin/choice_fn
