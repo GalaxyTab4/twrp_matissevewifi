@@ -1,4 +1,4 @@
-TWRP device tree for HTC Desire 620 (a31ul)
+TWRP device tree for HTC Desire 510 (a11ul)
 ========================================================
 
 For building TWRP for MSM8916 models only.
