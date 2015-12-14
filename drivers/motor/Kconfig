@@ -1,0 +1,31 @@
+# Kconfig for the motor
+#
+# vibrator controlled by PMIC regualtor configuration
+#
+
+menuconfig MSM_VIBRATOR
+	tristate "MSM_VIBRATOR"
+	default n
+	help
+	  Say Y to enable MSM_VIBRATOR support.
+
+config DC_VIB_PM_LDO
+	tristate "DC motor with PM LDO"
+	default n
+	help
+	  Set Y to use DC motor having power from PM LDO
+
+menuconfig VIBETONZ
+	tristate "Vibetonz"
+	default n
+	help
+	Say Y to enable Vibetonz support.
+	-------------
+	-------------
+	-------------
+
+config TACTILE_ASSIST
+	tristate "Auto Haptic"
+	default n
+	depends on VIBETONZ
+
