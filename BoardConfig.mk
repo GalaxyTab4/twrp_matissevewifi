@@ -1,10 +1,10 @@
 # Bootloader
 TARGET_NO_BOOTLOADER := true
-TARGET_BOOTLOADER_BOARD_NAME := msm8916
+TARGET_BOOTLOADER_BOARD_NAME := msm8226
 
 # Platform
-TARGET_BOARD_PLATFORM := msm8916
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno405
+TARGET_BOARD_PLATFORM := msm8226
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 
 # Architecture
 TARGET_ARCH := arm
@@ -21,16 +21,16 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_PLATFORM_DEVICE_BASE := /devices/msm_sdcc.1/
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/htc/a11ul/kernel
-TARGET_CUSTOM_KERNEL_HEADERS := device/htc/a11ul/include
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
-BOARD_KERNEL_BASE := 0x80000000
+TARGET_PREBUILT_KERNEL := device/samsung/matissewifi/kernel
+TARGET_CUSTOM_KERNEL_HEADERS := device/samsung/matissewifi/include
+BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive
+BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_MKBOOTIMG_ARGS := --dt device/htc/a11ul/dt.img --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
+BOARD_MKBOOTIMG_ARGS := --dt device/samsung/matissewifi/dt.img --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
 
 # USB Mounting
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
@@ -40,8 +40,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 
 # TWRP-Specific
-TARGET_RECOVERY_FSTAB := device/htc/a11ul/recovery/root/etc/twrp.fstab
-TW_THEME := portrait_hdpi
+TARGET_RECOVERY_FSTAB := device/samsung/matissewifi/recovery/root/etc/twrp.fstab
+TW_THEME := landscape_hdpi
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true

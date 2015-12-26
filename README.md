@@ -1,4 +1,4 @@
-TWRP device tree for HTC Desire 510 (a11ul)
+TWRP device tree for Samsung SM-T530 (matissewifi)
 ========================================================
 
-For building TWRP for MSM8916 models only.
+For building TWRP for MSM8226 models only.

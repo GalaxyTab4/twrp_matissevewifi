@@ -1,4 +1,4 @@
-LOCAL_PATH := device/htc/a11ul
+LOCAL_PATH := device/samsung/matissewifi
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -12,4 +12,4 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := a11ul
+PRODUCT_NAME := matissewifi
