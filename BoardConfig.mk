@@ -1,6 +1,6 @@
 # Mod
 TWRP_VERSION := 20151227
-PREBUILT_KERNEL := true
+PREBUILT_KERNEL := false
 
 LOCAL_PATH := device/samsung/matissewifi
 

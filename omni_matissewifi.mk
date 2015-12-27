@@ -1,5 +1,4 @@
 # Inherit device configuration
-$(call inherit-product, device/samsung/matissewifi/device.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
