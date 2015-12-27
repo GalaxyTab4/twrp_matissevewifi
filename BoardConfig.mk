@@ -1,6 +1,6 @@
 # Mod
 TWRP_VERSION := 20151227
-PREBUILT_KERNEL := false
+PREBUILT_KERNEL := true
 
 LOCAL_PATH := device/samsung/matissewifi
 
@@ -21,18 +21,10 @@ TARGET_RECOVERY_DEVICE_DIRS += device/samsung/matissewifi
 COMMON_GLOBAL_CFLAGS += -DQCOM_BSP
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_matisse
-TARGET_LIBINIT_DEFINES_FILE := $(LOCAL_PATH)/init/init_matisse.cpp
-TARGET_UNIFIED_DEVICE := true
-
-# Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
-
-# Init
 # TARGET_PLATFORM_DEVICE_BASE := /devices/msm_sdcc.1/
 
 # Kernel
-# TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel
+TARGET_PREBUILT_KERNEL := $(LOCAL_PATH)/kernel/zImage
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk
 BOARD_MKBOOTIMG_ARGS := --board $(TWRP_VERSION) --ramdisk_offset 0x02000000 --tags_offset 0x1e00000
 TARGET_CUSTOM_KERNEL_HEADERS := $(LOCAL_PATH)/include
@@ -69,3 +61,5 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 TW_NO_REBOOT_BOOTLOADER := true
 HAVE_SELINUX := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_QCOM_RTC_FIX := true
+
