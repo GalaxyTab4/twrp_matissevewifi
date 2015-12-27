@@ -1,4 +1,4 @@
-LOCAL_PATH := device/samsung/matissewifi
+LOCAL_PATH := device/samsung/matissevewifi
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel/zImage
@@ -11,4 +11,4 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
-PRODUCT_NAME := matissewifi
+PRODUCT_NAME := matissevewifi

@@ -1,8 +1,8 @@
 [
     {
         "remote": "github",
-        "repository": "galaxytab4/twrp_matissewifi",
-        "target_path": "kernel/samsung/matisse",
+        "repository": "galaxytab4/twrp_matissevewifi",
+        "target_path": "kernel/samsung/matisseve",
         "revision": "kernel"
     }
 ]
