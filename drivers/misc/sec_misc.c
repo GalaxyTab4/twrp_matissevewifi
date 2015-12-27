@@ -172,7 +172,7 @@ static ssize_t debug_level_show(struct device *dev,
 	char buffer[7];
 	convert_debug_level_int(kernel_sec_get_debug_level(), buffer);
 
-return snprintf(buf, PAGE_SIZE, "%d\n", buffer);
+	return snprintf(buf, sizeof(buffer)+1, "%s\n", buffer);
 }
 
 static ssize_t debug_level_store(struct device *dev,
