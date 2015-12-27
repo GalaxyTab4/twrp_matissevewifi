@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_matissewifi.mk \
-    $(LOCAL_DIR)/omni_matissewifi.mk
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),matissewifi)
+
+include $(call all-makefiles-under,$(LOCAL_PATH))
+
+endif

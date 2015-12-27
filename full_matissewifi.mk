@@ -12,6 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_matissewifi.mk \
-    $(LOCAL_DIR)/omni_matissewifi.mk
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit from matisse device
+$(call inherit-product, device/samsung/matissewifi/device.mk)
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := matissewifi
+PRODUCT_NAME := full_matissewifi
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := Samsung
+PRODUCT_MODEL := SM-T530
